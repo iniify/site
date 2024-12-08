@@ -1,4 +1,5 @@
 title: megathread
+theme: minima
 description: idk
 baseurl: "" # Ponechte prázdné pro GitHub Pages
 markdown: kramdown
