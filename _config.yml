@@ -1,0 +1,10 @@
+title: megathread
+description: idk
+baseurl: "" # Ponechte prázdné pro GitHub Pages
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+exclude:
+  - submodul/README.md
