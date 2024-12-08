@@ -3,22 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Markdown Viewer</title>
+  <title>Documentation Viewer</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script> <!-- Markdown renderer -->
 </head>
 <body>
   <div id="container">
-    <!-- Levý panel s tree strukturou -->
+    <!-- Levý strom -->
     <div id="tree">
+      <h2>📂 Dokumentace</h2>
       <ul id="fileTree"></ul>
     </div>
-    
-    <!-- Pravý panel s obsahem -->
+
+    <!-- Pravý panel -->
     <div id="content">
-      <h1>Markdown Viewer</h1>
-      <div id="markdownContent">Vyberte soubor ze stromu vlevo.</div>
+      <h1>Vítejte v dokumentaci</h1>
+      <div id="markdownContent">Vyberte soubor vlevo.</div>
     </div>
   </div>
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
