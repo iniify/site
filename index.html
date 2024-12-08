@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,18 +7,19 @@
 </head>
 <body>
   <div id="container">
-    <!-- Levý strom -->
+    <!-- Levý panel s tree strukturou -->
     <div id="tree">
       <h2>📂 Dokumentace</h2>
       <ul id="fileTree"></ul>
     </div>
-
-    <!-- Pravý panel -->
+    
+    <!-- Pravý panel s obsahem -->
     <div id="content">
-      <h1>Vítejte v dokumentaci</h1>
-      <div id="markdownContent">Vyberte soubor vlevo.</div>
+      <h1>Markdown Viewer</h1>
+      <div id="markdownContent">Vyberte soubor ze stromu vlevo.</div>
     </div>
   </div>
+
   <script src="script.js" defer></script>
 </body>
 </html>
