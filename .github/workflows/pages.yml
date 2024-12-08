@@ -1,4 +1,4 @@
-name: Deploy GitHub Pages
+name: GitHub Pages Deploy
 
 on:
   push:
@@ -10,24 +10,24 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
+      - name: Checkout code
         uses: actions/checkout@v3
         with:
-          submodules: recursive # Zajistí, že submoduly budou klonovány
+          submodules: recursive # Stáhne obsah submodulů
 
-      - name: Set up Ruby for Jekyll
-        uses: ruby/setup-ruby@v1
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
         with:
-          ruby-version: 3.0
+          node-version: 16
 
       - name: Install dependencies
-        run: bundle install
+        run: npm install
 
       - name: Build site
-        run: bundle exec jekyll build
+        run: npm run build # Nahraďte příkazem, který používáte k sestavení
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_site
+          publish_dir: ./ # Změňte cestu, pokud máte jinou složku
